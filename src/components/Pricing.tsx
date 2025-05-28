@@ -123,7 +123,7 @@ const Pricing: React.FC = () => {
                   </div>
 
                   <a 
-                    href={selectedOption === 'standard' ? 'https://remarketing-orcin.vercel.app/' : 'https://payment.ticto.app/OFAA22F65'} 
+                    href={selectedOption === 'standard' ? 'https://remarketing-orcin.vercel.app/' : 'https://pay.kiwify.com.br/jk0QIb9'} 
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`block text-center text-white font-medium px-8 py-4 rounded-full shadow-lg transition-colors ${
