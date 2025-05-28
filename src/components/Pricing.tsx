@@ -123,7 +123,7 @@ const Pricing: React.FC = () => {
                   </div>
 
                   <a 
-                    href={selectedOption === 'standard' ? 'https://pay.kiwify.com.br/6tkqn2K' : 'https://payment.ticto.app/OFAA22F65'} 
+                    href={selectedOption === 'standard' ? 'https://pay.kiwify.com.br/y7uVOqb' : 'https://payment.ticto.app/OFAA22F65'} 
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`block text-center text-white font-medium px-8 py-4 rounded-full shadow-lg transition-colors ${
