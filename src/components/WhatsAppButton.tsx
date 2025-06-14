@@ -14,7 +14,7 @@ const WhatsAppButton: React.FC = () => {
           </p>
           <div className="flex justify-center">
             <a
-              href="https://wa.me/554799252335"
+              href="https://wa.me/554799658915"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-medium transition-all duration-300 shadow-md hover:shadow-xl"
