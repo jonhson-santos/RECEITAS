@@ -12,7 +12,7 @@ const Gallery: React.FC = () => {
             children.forEach((child, index) => {
               setTimeout(() => {
                 (child as HTMLElement).classList.add('animate-fade-in');
-              }, index * 150);
+              }, index * 100);
             });
             observer.unobserve(entry.target);
           }
@@ -43,85 +43,79 @@ const Gallery: React.FC = () => {
   const ingredients = [
     {
       name: "Gengibre",
-      image: "https://images.pexels.com/photos/4198843/pexels-photo-4198843.jpeg",
       properties: "Anti-inflamatório, digestivo"
     },
     {
       name: "Canela",
-      image: "https://images.pexels.com/photos/4198475/pexels-photo-4198475.jpeg",
       properties: "Regula açúcar, antioxidante"
     },
     {
       name: "Alho",
-      image: "https://images.pexels.com/photos/4198490/pexels-photo-4198490.jpeg",
       properties: "Imunidade, cardiovascular"
     },
     {
       name: "Mel",
-      image: "https://images.pexels.com/photos/4198484/pexels-photo-4198484.jpeg",
       properties: "Antibacteriano, calmante"
     },
     {
       name: "Cúrcuma",
-      image: "https://images.pexels.com/photos/4198572/pexels-photo-4198572.jpeg",
       properties: "Anti-inflamatório, antioxidante"
     },
     {
       name: "Camomila",
-      image: "https://images.pexels.com/photos/4207905/pexels-photo-4207905.jpeg",
       properties: "Calmante, digestiva"
     },
     {
       name: "Limão",
-      image: "https://images.pexels.com/photos/4198444/pexels-photo-4198444.jpeg",
       properties: "Alcalinizante, vitamina C"
     },
     {
       name: "Hortelã",
-      image: "https://images.pexels.com/photos/4198439/pexels-photo-4198439.jpeg",
       properties: "Digestiva, refrescante"
     }
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-natural-50">
+    <section className="py-12 md:py-16 lg:py-24 bg-natural-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-bold text-natural-800 mb-4">
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="font-serif text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-natural-800 mb-3 md:mb-4 leading-tight">
             Ingredientes <span className="text-natural-600">Simples</span>, Resultados <span className="text-natural-600">Extraordinários</span>
           </h2>
-          <p className="text-lg text-natural-700 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-natural-700 max-w-2xl mx-auto px-2">
             Conheça alguns dos ingredientes poderosos que você já tem em casa e que são utilizados em nossas receitas naturais
           </p>
         </div>
 
         <div 
           ref={galleryRef} 
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6"
+          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4 lg:gap-6"
         >
           {ingredients.map((ingredient, index) => (
             <div 
               key={index} 
-              className="gallery-item group relative rounded-xl overflow-hidden shadow-md opacity-0 transition-all duration-500"
+              className="gallery-item group relative rounded-lg md:rounded-xl overflow-hidden shadow-sm md:shadow-md opacity-0 transition-all duration-500 bg-white"
             >
-              <img 
-                src={ingredient.image} 
-                alt={ingredient.name}
-                className="w-full h-48 md:h-56 object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex flex-col justify-end p-4">
-                <h3 className="text-white font-bold text-lg">{ingredient.name}</h3>
-                <p className="text-white/80 text-sm">{ingredient.properties}</p>
+              <div className="h-32 sm:h-40 md:h-48 lg:h-56 bg-gradient-to-br from-natural-100 to-natural-200 flex items-center justify-center">
+                <div className="text-center p-3">
+                  <div className="w-8 h-8 md:w-12 md:h-12 bg-natural-600 rounded-full mx-auto mb-2 flex items-center justify-center">
+                    <span className="text-white text-xs md:text-sm font-bold">
+                      {ingredient.name.charAt(0)}
+                    </span>
+                  </div>
+                  <h3 className="text-natural-800 font-bold text-sm md:text-base mb-1">{ingredient.name}</h3>
+                  <p className="text-natural-600 text-xs md:text-sm leading-tight">{ingredient.properties}</p>
+                </div>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="mt-12 text-center">
+        <div className="mt-8 md:mt-12 text-center">
           <a 
             href="#oferta" 
             onClick={handleScrollToOffers}
-            className="inline-block bg-natural-600 hover:bg-natural-700 text-white font-medium px-6 py-3 rounded-full transition-colors shadow-md hover:shadow-lg"
+            className="inline-block bg-natural-600 hover:bg-natural-700 text-white font-medium px-6 py-3 rounded-full transition-colors shadow-md hover:shadow-lg text-sm md:text-base"
           >
             Acesse Todas as Receitas Agora
           </a>
