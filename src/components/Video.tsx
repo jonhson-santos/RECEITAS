@@ -3,7 +3,7 @@ import { Play } from 'lucide-react';
 
 const Video: React.FC = () => {
   const [videoLoaded, setVideoLoaded] = useState(false);
-  const videoId = "3zN76HIWclU";
+  const videoId = "YqhcwFFFAN0";
   
   return (
     <div className="relative max-w-2xl mx-auto">
